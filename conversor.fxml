@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.conversor.controllers.ConversorController"
-            prefWidth="400.0" prefHeight="300.0">
+            prefWidth="400.0" prefHeight="400.0">
     <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
         <Label text="Conversor de Unidades">
             <font>
@@ -23,12 +23,19 @@
 
         <TextField fx:id="txtValor" promptText="Ingrese valor" prefWidth="250"/>
 
-        <Button text="Convertir" onAction="#convertir" prefWidth="100"/>
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Convertir" onAction="#convertir" prefWidth="100"/>
+            <Button text="Limpiar Campos" onAction="#limpiarCampos" prefWidth="120"/>
+            <Button text="Limpiar Historial" onAction="#limpiarHistorial" prefWidth="120"/>
+        </HBox>
 
         <Label fx:id="lblResultado" text="Resultado">
             <font>
                 <Font name="System" size="16"/>
             </font>
         </Label>
+
+        <TextArea fx:id="txtHistorial" editable="false" prefRowCount="8" prefWidth="350" wrapText="true" />
     </VBox>
 </AnchorPane>
+
